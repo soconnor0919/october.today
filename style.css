@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff7518; /* Pumpkin orange */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.date {
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+}
+
+#october-day {
+    font-weight: 700;
+    color: #ff7518; /* Pumpkin orange */
+}
+
+.year {
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+} 
