@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Light mode variables */
+  --color-background: hsl(200, 30%, 97%);
+  --color-foreground: hsl(200, 50%, 20%);
+  --color-card: hsla(0, 0%, 100%, 0.5);
+  --color-card-foreground: hsl(200, 50%, 20%);
+  --color-primary: hsl(200, 85%, 45%);
+  --color-primary-foreground: hsl(0, 0%, 100%);
+  --color-secondary: hsl(37, 95%, 58%);
+  --color-secondary-foreground: hsl(200, 50%, 20%);
+  --color-muted: hsl(200, 30%, 96%);
+  --color-muted-foreground: hsl(200, 30%, 40%);
+  --color-accent: hsl(200, 85%, 45%);
+  --color-accent-foreground: hsl(0, 0%, 100%);
+  --color-border: hsla(200, 30%, 90%, 0.2);
+  --radius: 0.75rem;
+
+  --animate-gradient-move-1: gradient-move-1 30s ease-in-out infinite;
+
+  @keyframes gradient-move-1 {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+
+    25% {
+      transform: translate(-50%, -50%) scale(1.05) rotate(90deg);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) scale(0.95) rotate(180deg);
+    }
+
+    75% {
+      transform: translate(-50%, -50%) scale(1.05) rotate(270deg);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+  }
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: hsl(200, 30%, 8%);
+    --color-foreground: hsl(200, 20%, 96%);
+    --color-card: hsla(200, 25%, 15%, 0.4);
+    --color-card-foreground: hsl(200, 15%, 85%);
+    --color-primary: hsl(200, 70%, 40%);
+    --color-primary-foreground: hsl(0, 0%, 100%);
+    --color-secondary: hsl(37, 92%, 50%);
+    --color-secondary-foreground: hsl(200, 20%, 96%);
+    --color-muted: hsl(200, 30%, 20%);
+    --color-muted-foreground: hsl(200, 30%, 65%);
+    --color-accent: hsl(200, 70%, 40%);
+    --color-accent-foreground: hsl(0, 0%, 100%);
+    --color-border: hsla(200, 30%, 20%, 0.2);
+  }
+}
+
+/* Base styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  background-image: url('/grid.svg');
+  background-size: 20px 20px;
+  background-position: center;
+}

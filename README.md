@@ -1,30 +1,63 @@
-# October.Today
+# october.today
 
-A simple website that displays the date as if October 2019 never ended.
+A simple, elegant counter showing how many days it's been since October 1, 2019.
 
-## About
+Built with Next.js, shadcn/ui, and the "Soft, Translucent, Alive" design philosophy.
 
-This website is based on a running joke between friends where we count the days as if we're still in October 2019. Instead of showing today's actual date, it displays it as "October Nth, 2019" where N is the number of days since October 1, 2019.
+## Features
 
-## How It Works
+- **Dynamic Counter**: Calculates and displays days since October 1, 2019
+- **Smooth Animations**: Number counting animation and interactive hover effects
+- **Share Functionality**: Share via SMS with a single click
+- **Modern Design**: Glassmorphism UI with "Living Blob" background animation
+- **Typography**: Editorial-style typography using Playfair Display and Inter
+- **Analytics**: Optional Umami tracking support
 
-The site uses JavaScript to:
-1. Calculate the number of days since October 1, 2019
-2. Display the result as "October [day count]" with the appropriate ordinal suffix (st, nd, rd, th)
+## Development
+
+```bash
+# Install dependencies
+bun install
+
+# Run development server
+bun dev
+
+# Build for production
+bun run build
+# or
+npm run build
+
+# Type check
+bun typecheck
+```
 
 ## Deployment
 
-This site is meant to be deployed on GitHub Pages. To deploy:
+This project is configured for static export and deploys automatically to GitHub Pages via GitHub Actions.
 
-1. Push this repository to GitHub
-2. Go to repository Settings > Pages
-3. Select the main branch as the source
-4. The site will be published at https://[your-username].github.io/[repository-name]/
+### Setup
 
-## Local Development
+1. Enable GitHub Pages in repository settings (Source: GitHub Actions)
+2. (Optional) Add repository secrets for Umami analytics:
+   - `NEXT_PUBLIC_UMAMI_URL`
+   - `NEXT_PUBLIC_UMAMI_WEBSITE_ID`
 
-To run this site locally, simply open the `index.html` file in a web browser.
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router, Static Export)
+- **Styling**: Tailwind CSS v4, shadcn/ui
+- **Fonts**: Playfair Display (headings), Inter (body)
+- **Package Manager**: Bun
+- **Deployment**: GitHub Pages
+
+## Design Philosophy
+
+The design follows three core principles:
+
+- **Soft**: Deep border radii (1rem-1.5rem) for organic, friendly shapes
+- **Translucent**: Glassmorphism effects with backdrop blur
+- **Alive**: Continuous subtle animations that make the UI feel dynamic
 
 ## License
 
-This project is open source and available for anyone to use or modify. 
+MIT
